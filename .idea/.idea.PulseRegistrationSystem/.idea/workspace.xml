@@ -10,13 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29cf4941-6d04-483b-a529-5b23b2913576" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/LoginController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/EnderecoRequestDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/PulseRegistrationSystem.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/PulseRegistrationSystem.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/UsuarioRequestDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/UsuarioRequestDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Response/UsuarioResponseDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Response/UsuarioResponseDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/PulseRegistrationSystemContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/PulseRegistrationSystemContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/PulseRegistrationSystem.Infraestructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/PulseRegistrationSystem.Infraestructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/MapperConfiguration/MappingConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/MapperConfiguration/MappingConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Endereco.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Endereco.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Usuario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Usuario.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/LoginController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/EnderecoRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/LoginRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/UsuarioRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Response/LoginResponseDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,12 +57,12 @@
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/Mappings/LoginMapping.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/Mappings/UsuarioMapping.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/PulseRegistrationSystemContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/PulseRegistrationSystemContextFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Implementation/LoginRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Implementation/UsuarioRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Interface/ILoginRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Interface/IMethodsRepository.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -147,6 +150,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

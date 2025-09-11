@@ -17,7 +17,7 @@ public class UsuarioRequestDto
  
     
 
-    public Endereco FilialMottu { get; set; }
+    public EnderecoRequestDto FilialMottu { get; set; }
  
     
 

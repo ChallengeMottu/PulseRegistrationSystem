@@ -2,20 +2,29 @@ namespace PulseRegistrationSystem.Domain.Entities;
 
 public class Endereco
 {
-    public string Rua { get; set; }
-    public string Complemento { get; set; }
-    public string Bairro { get; set; }
-    public string Cep { get; set; }
-    public string Cidade { get; set; }
-    public string Estado { get; set; }
- 
-    public Endereco()
+    public string Rua { get; }
+    public string Complemento { get; }
+    public string Bairro { get; }
+    public string Cep { get; }
+    public string Cidade { get; }
+    public string Estado { get; }
+
+    public Endereco(string rua, string complemento, string bairro, string cep, string cidade, string estado)
     {
- 
+        Rua = ValidarObrigatorio(rua, nameof(Rua));
+        Bairro = ValidarObrigatorio(bairro, nameof(Bairro));
+        Cidade = ValidarObrigatorio(cidade, nameof(Cidade));
+        Estado = ValidarObrigatorio(estado, nameof(Estado));
+        Cep = ValidarObrigatorio(cep, nameof(cep));
+        Complemento = complemento;
     }
- 
-    public void ValidaCep(string cep)
+
+    private static string ValidarObrigatorio(string valor, string nomeCampo)
     {
-        if (string.IsNullOrEmpty(cep) || cep.Length != 8) throw new ArgumentException("CEP inválido");
+        if (string.IsNullOrWhiteSpace(valor))
+            throw new ArgumentException($"{nomeCampo} inválido");
+        return valor;
     }
+
+    
 }

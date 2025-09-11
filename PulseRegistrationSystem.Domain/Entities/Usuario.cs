@@ -24,35 +24,24 @@ public class Usuario
  
     public Login Login { get; set; }
  
-    public Usuario(){}
+    protected Usuario(){}
  
-    public Usuario(string nome, string cpf, DateTime dataNascimento, 
-
+    public Usuario(string nome, string cpf, DateTime dataNascimento,
         Endereco filialMottu, string email, FuncaoEnum funcao, Login login)
-
     {
-
         Id = Guid.NewGuid();
-
         Nome = nome;
-
         Cpf = cpf;
-
         DataNascimento = dataNascimento;
-
         FilialMottu = filialMottu;
-
         Email = email;
-
         Funcao = funcao;
-
         Login = login;
- 
-        Validar(); 
 
+        Validar(); 
     }
- 
-    private void Validar()
+
+    public void Validar()
 
     {
 
