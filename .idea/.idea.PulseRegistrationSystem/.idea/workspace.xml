@@ -10,23 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29cf4941-6d04-483b-a529-5b23b2913576" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Endereco.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Login.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Usuario.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Enums/FuncaoEnum.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Exceptions/InvalidUserAgeException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Exceptions/InvalidUserDataException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Exceptions/UserNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/SecurityConfiguration/ISenhaHasher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Configuration/Secutiry/BCryptSenhaHasher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Configuration/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/Mappings/LoginMapping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/Mappings/UsuarioMapping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/PulseRegistrationSystemContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Implementation/LoginRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Implementation/UsuarioRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Interface/ILoginRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Interface/IMethodsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +40,9 @@
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Interface/ILoginRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Interface/IMethodsRepository.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="32Z1RRAl5sWN2yojueYyOcveHQD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -69,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/RM558830",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
