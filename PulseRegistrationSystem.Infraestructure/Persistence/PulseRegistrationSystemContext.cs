@@ -4,17 +4,9 @@ using PulseRegistrationSystem.Infraestructure.Persistence.Mappings;
 
 namespace PulseRegistrationSystem.Infraestructure.Persistence;
 
-public class PulseRegistrationSystemContext : DbContext
+public class PulseRegistrationSystemContext(DbContextOptions<PulseRegistrationSystemContext> options) : DbContext(options)
 
 {
-
-    public PulseRegistrationSystemContext(DbContextOptions<PulseRegistrationSystemContext> options)
-
-        : base(options)
-
-    {
-
-    }
  
     public DbSet<Usuario> Usuarios { get; set; }
 
@@ -30,7 +22,7 @@ public class PulseRegistrationSystemContext : DbContext
         modelBuilder.ApplyConfiguration(new LoginMapping());
         
 
-        base.OnModelCreating(modelBuilder);
+        
 
     }
 

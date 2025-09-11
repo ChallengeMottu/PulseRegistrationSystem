@@ -1,6 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 using PulseRegistrationSystem.Application.MapperConfiguration;
 using PulseRegistrationSystem.Application.Services.Configuration;
 using PulseRegistrationSystem.Infraestructure.Configuration;
+using PulseRegistrationSystem.Infraestructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +26,7 @@ builder.Services.AddServices();
 builder.Services.AddAutoMapper(cfg => {}, typeof(MappingConfig));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 var app = builder.Build();
 
