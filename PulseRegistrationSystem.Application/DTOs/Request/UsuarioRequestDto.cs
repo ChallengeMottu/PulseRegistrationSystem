@@ -7,7 +7,7 @@ public class UsuarioRequestDto
 
 {
 
-    public string Name { get; set; }
+    public string Nome { get; set; }
  
     
 
