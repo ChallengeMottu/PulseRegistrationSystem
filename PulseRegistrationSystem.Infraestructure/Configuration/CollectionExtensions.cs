@@ -10,7 +10,7 @@ using PulseRegistrationSystem.Infraestructure.Repositories.Interface;
 
 namespace PulseRegistrationSystem.Infraestructure.Configuration;
 
-public static class ServiceCollectionExtensions
+public static class CollectionExtensions
 
 {
 
@@ -38,19 +38,7 @@ public static class ServiceCollectionExtensions
 
     }
  
-    public static IServiceCollection AddServices(this IServiceCollection services)
-
-    {
-
-        services.AddScoped<ILoginService, LoginService>();
-
-        services.AddScoped<IUsuarioService, CadastroService>();
-
-        services.AddScoped<ISenhaHasher, BCryptSenhaHasher>();
-
-        return services;
-
-    }
+    
 
 }
 

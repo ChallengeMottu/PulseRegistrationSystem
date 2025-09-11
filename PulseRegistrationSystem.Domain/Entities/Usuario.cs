@@ -24,6 +24,7 @@ public class Usuario
  
     public Login Login { get; set; }
  
+    public Usuario(){}
  
     public Usuario(string nome, string cpf, DateTime dataNascimento, 
 

@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\PulseRegistrationSystem.Application\PulseRegistrationSystem.Application.csproj" />
       <ProjectReference Include="..\PulseRegistrationSystem.Domain\PulseRegistrationSystem.Domain.csproj" />
     </ItemGroup>
 

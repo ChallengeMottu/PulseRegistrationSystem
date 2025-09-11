@@ -7,7 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Services\" />
+      <ProjectReference Include="..\PulseRegistrationSystem.Domain\PulseRegistrationSystem.Domain.csproj" />
+      <ProjectReference Include="..\PulseRegistrationSystem.Infraestructure\PulseRegistrationSystem.Infraestructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="15.0.1" />
     </ItemGroup>
 
 </Project>
