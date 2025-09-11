@@ -9,16 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29cf4941-6d04-483b-a529-5b23b2913576" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/LoginController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/EnderecoRequestDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/UsuarioRequestDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/UsuarioRequestDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/MapperConfiguration/MappingConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/MapperConfiguration/MappingConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Endereco.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Endereco.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Usuario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Usuario.cs" afterDir="false" />
-    </list>
+    <list default="true" id="29cf4941-6d04-483b-a529-5b23b2913576" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
