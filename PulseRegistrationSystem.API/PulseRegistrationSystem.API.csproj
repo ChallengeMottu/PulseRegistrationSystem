@@ -12,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\PulseRegistrationSystem.Application\PulseRegistrationSystem.Application.csproj" />
       <ProjectReference Include="..\PulseRegistrationSystem.Infraestructure\PulseRegistrationSystem.Infraestructure.csproj" />
     </ItemGroup>
 

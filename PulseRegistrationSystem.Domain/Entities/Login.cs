@@ -15,6 +15,8 @@ public class Login
     public Usuario Usuario { get; private set; }
 
     public int TentativasLogin { get; private set; }
+    
+    public Login(){}
  
     public Login(string cpf, string senha, ISenhaHasher hasher)
 
