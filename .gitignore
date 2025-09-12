@@ -1,6 +1,32 @@
+# Build
 bin/
 obj/
-/packages/
-riderModule.iml
-/_ReSharper.Caches/
+out/
+
+# Pacotes
+*.nupkg
+packages/
+*.snupkg
+
+# Visual Studio / Rider / IDEs
+.vs/
 .idea/
+*.sln.iml
+*.Rider*
+_ReSharper.Caches/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.DS_Store
+
+# Publish / Deploy
+publish/
