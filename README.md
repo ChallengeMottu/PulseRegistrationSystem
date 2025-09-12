@@ -1,3 +1,4 @@
+
 🚀 PulseRegistrationSystem
 
 📌 Checkpoint 4 - 2TDS - CLEAN CODE, DDD e CLEAN ARCH COM .NET 8 (2025)
@@ -133,3 +134,4 @@ Content-Type: application/json
 Remover usuário
 
 DELETE /api/usuario/{id}
+
