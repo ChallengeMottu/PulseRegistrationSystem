@@ -41,7 +41,7 @@ public LoginService(ILoginRepository loginRepository, IMapper mapper, ISenhaHash
 
     }
  
-    public async Task<LoginResponseDto> BuscarPorIdAsync(Guid id)
+    public async Task<LoginResponseDto> BuscarPorIdAsync(string id)
 
     {
 
@@ -55,7 +55,7 @@ public LoginService(ILoginRepository loginRepository, IMapper mapper, ISenhaHash
 
     }
  
-    public async Task AtualizarSenhaAsync(Guid id, string novaSenha)
+    public async Task AtualizarSenhaAsync(string id, string novaSenha)
 
     {
 
@@ -73,7 +73,7 @@ public LoginService(ILoginRepository loginRepository, IMapper mapper, ISenhaHash
 
     }
  
-    public async Task DeleteAsync(Guid id)
+    public async Task DeleteAsync(string id)
 
     {
 
@@ -131,7 +131,7 @@ public LoginService(ILoginRepository loginRepository, IMapper mapper, ISenhaHash
 
     }
  
-    public async Task DesbloquearUsuarioAsync(Guid id)
+    public async Task DesbloquearUsuarioAsync(string id)
 
     {
 

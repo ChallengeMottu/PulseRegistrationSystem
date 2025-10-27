@@ -1,4 +1,5 @@
 using AutoMapper;
+using MongoDB.Bson;
 using PulseRegistrationSystem.Application.DTOs.Request;
 using PulseRegistrationSystem.Application.DTOs.Response;
 using PulseRegistrationSystem.Application.Services.Interface;
@@ -16,6 +17,7 @@ public class UsuarioService : IUsuarioService
     private readonly IMapper _mapper;
 
     private readonly ISenhaHasher _senhaHasher;
+    private readonly ILoginRepository _loginRepository; 
  
     public UsuarioService(
 
@@ -23,7 +25,7 @@ public class UsuarioService : IUsuarioService
 
         IMapper mapper,
 
-        ISenhaHasher senhaHasher)
+        ISenhaHasher senhaHasher, ILoginRepository loginRepository)
 
     {
 
@@ -32,30 +34,23 @@ public class UsuarioService : IUsuarioService
         _mapper = mapper;
 
         _senhaHasher = senhaHasher;
+        _loginRepository = loginRepository;
 
     }
  
     public async Task<UsuarioResponseDto> CriarAsync(UsuarioRequestDto usuarioRequestDto)
-
     {
-
         var usuario = _mapper.Map<Usuario>(usuarioRequestDto);
- 
-        
+        usuario.Id = ObjectId.GenerateNewId().ToString();
 
-        var login = new Login(usuarioRequestDto.Cpf, usuarioRequestDto.Senha, _senhaHasher);
- 
- 
+        var login = new Login(usuarioRequestDto.Cpf, usuarioRequestDto.Senha, _senhaHasher, usuario.Id);
         usuario.Login = login;
- 
-        
 
-        await _usuarioRepository.AddAsync(usuario);
- 
         
+        await _usuarioRepository.AddAsync(usuario);
+        await _loginRepository.AddAsync(login); 
 
         return _mapper.Map<UsuarioResponseDto>(usuario);
-
     }
  
     public async Task<IEnumerable<UsuarioResponseDto>> ListarTodosAsync()
@@ -68,7 +63,7 @@ public class UsuarioService : IUsuarioService
 
     }
  
-    public async Task<UsuarioResponseDto> BuscarPorIdAsync(Guid id)
+    public async Task<UsuarioResponseDto> BuscarPorIdAsync(string id)
 
     {
 
@@ -82,7 +77,7 @@ public class UsuarioService : IUsuarioService
 
     }
  
-    public async Task AtualizarAsync(Guid id, UsuarioRequestDto dto)
+    public async Task AtualizarAsync(string id, UsuarioRequestDto dto)
 
     {
 
@@ -98,7 +93,7 @@ public class UsuarioService : IUsuarioService
 
     }
  
-    public async Task DeletarAsync(Guid id)
+    public async Task DeletarAsync(string id)
 
     {
 

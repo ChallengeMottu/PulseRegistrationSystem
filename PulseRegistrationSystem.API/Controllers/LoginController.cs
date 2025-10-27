@@ -65,7 +65,7 @@ namespace PulseRegistrationSystem.API.Controllers
         [ProducesResponseType(typeof(LoginResponseDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(object), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<LoginResponseDto>> BuscarPorId(Guid id)
+        public async Task<ActionResult<LoginResponseDto>> BuscarPorId(string id)
         {
             try
             {
@@ -108,7 +108,7 @@ namespace PulseRegistrationSystem.API.Controllers
         [ProducesResponseType(typeof(object), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(object), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> AtualizarSenha(Guid id, [FromBody] string novaSenha)
+        public async Task<IActionResult> AtualizarSenha(string id, [FromBody] string novaSenha)
         {
             if (string.IsNullOrWhiteSpace(novaSenha))
                 return BadRequest(new { mensagem = "Nova senha inválida." });
@@ -132,7 +132,7 @@ namespace PulseRegistrationSystem.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(object), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Deletar(Guid id)
+        public async Task<IActionResult> Deletar(string id)
         {
             try
             {
@@ -153,7 +153,7 @@ namespace PulseRegistrationSystem.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(object), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Desbloquear(Guid id)
+        public async Task<IActionResult> Desbloquear(string id)
         {
             try
             {

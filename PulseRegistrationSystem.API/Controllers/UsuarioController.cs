@@ -25,7 +25,7 @@ public class UsuarioController(IUsuarioService usuarioService) : ControllerBase
     [ProducesResponseType(typeof(UsuarioResponseDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(object), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-    public async Task<ActionResult<UsuarioResponseDto>> BuscarPorId(Guid id)
+    public async Task<ActionResult<UsuarioResponseDto>> BuscarPorId(string id)
     {
         try
         {
@@ -81,7 +81,7 @@ public class UsuarioController(IUsuarioService usuarioService) : ControllerBase
     [ProducesResponseType(typeof(object), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(object), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> Atualizar(Guid id, [FromBody] UsuarioRequestDto usuarioRequest)
+    public async Task<IActionResult> Atualizar(string id, [FromBody] UsuarioRequestDto usuarioRequest)
     {
         if (!ModelState.IsValid)
         {
@@ -123,7 +123,7 @@ public class UsuarioController(IUsuarioService usuarioService) : ControllerBase
     [ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(object), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(object), StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> Deletar(Guid id)
+    public async Task<IActionResult> Deletar(string id)
     {
         try
         {

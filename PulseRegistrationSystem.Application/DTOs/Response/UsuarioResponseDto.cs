@@ -5,7 +5,7 @@ namespace PulseRegistrationSystem.Application.DTOs.Response;
 
 public class UsuarioResponseDto
 {
-    public Guid Id { get; set; }
+    public string Id { get; set; }
     public string Nome { get; set; }
     public string Cpf { get; set; }
     public DateTime DataNascimento { get; set; }

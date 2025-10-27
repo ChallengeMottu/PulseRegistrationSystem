@@ -1,72 +1,36 @@
-using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 using PulseRegistrationSystem.Domain.Entities;
-using PulseRegistrationSystem.Infraestructure.Persistence;
 using PulseRegistrationSystem.Infraestructure.Repositories.Interface;
+using PulseRegistrationSystem.Infrastructure.Persistence.Database;
 
-namespace PulseRegistrationSystem.Infraestructure.Repositories.Implementation;
 
 public class UsuarioRepository : IMethodsRepository<Usuario>
-
 {
+    private readonly IMongoCollection<Usuario> _usuarios;
 
-    private readonly PulseRegistrationSystemContext _context;
-
-    private readonly DbSet<Usuario> _dbSet;
- 
-    public UsuarioRepository(PulseRegistrationSystemContext context)
-
+    public UsuarioRepository(MongoDbContext context)
     {
-
-        _context = context;
-
-        _dbSet = context.Set<Usuario>();
-
+        _usuarios = context.GetCollection<Usuario>("usuarios");
     }
 
-    public async Task AddAsync(Usuario usuario)
+    public async Task<IEnumerable<Usuario>> GetAllAsync() =>
+        await _usuarios.Find(_ => true).ToListAsync();
 
+    public async Task<Usuario?> GetByIdAsync(string id) =>
+        await _usuarios.Find(u => u.Id == id).FirstOrDefaultAsync();
+
+    public async Task AddAsync(Usuario entity) =>
+        await _usuarios.InsertOneAsync(entity);
+
+    public async Task UpdateAsync(Usuario entity)
     {
-
-        await _dbSet.AddAsync(usuario);
-
-        await _context.SaveChangesAsync();
-
+        var filter = Builders<Usuario>.Filter.Eq(u => u.Id, entity.Id);
+        await _usuarios.ReplaceOneAsync(filter, entity);
     }
- 
-    public async Task<IEnumerable<Usuario>> GetAllAsync()
 
+    public async Task RemoveAsync(Usuario entity)
     {
-
-        return await _dbSet.ToListAsync();
-
+        var filter = Builders<Usuario>.Filter.Eq(u => u.Id, entity.Id);
+        await _usuarios.DeleteOneAsync(filter);
     }
- 
-    public async Task<Usuario?> GetByIdAsync(Guid id)
-
-    {
-
-        return await _dbSet.FindAsync(id);
-
-    }
- 
-    public async Task RemoveAsync(Usuario usuario)
-
-    {
-
-        _dbSet.Remove(usuario);
-
-        await _context.SaveChangesAsync();
-
-    }
- 
-    public async Task UpdateAsync(Usuario usuario)
-
-    {
-
-        _dbSet.Update(usuario);
-
-        await _context.SaveChangesAsync();
-
-    }
- 
 }
