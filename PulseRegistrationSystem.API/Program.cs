@@ -1,13 +1,13 @@
-using Microsoft.EntityFrameworkCore;
+using PulseRegistrationSystem.API.Configuration;
 using PulseRegistrationSystem.Application.MapperConfiguration;
 using PulseRegistrationSystem.Application.Services.Configuration;
+using PulseRegistrationSystem.Domain.SecurityConfiguration;
 using PulseRegistrationSystem.Infraestructure.Configuration;
-using PulseRegistrationSystem.Infraestructure.Persistence;
+using PulseRegistrationSystem.Infraestructure.Configuration.Secutiry;
+using PulseRegistrationSystem.Infrastructure.Persistence.Configs;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -18,19 +18,22 @@ builder.Services.AddSwaggerGen(options =>
         Description = "Documentação da API REST do sistema de registro"
     });
 });
-
+var settings = builder.Configuration.GetSection("Settings").Get<Settings>();
+builder.Services.AddScoped<ISenhaHasher, BCryptSenhaHasher>();
+builder.Services.AddInfra(settings);
 builder.Services.AddControllers();
-builder.Services.AddAppDbContext(builder.Configuration);
-builder.Services.AddRepositories();
 builder.Services.AddServices();
 builder.Services.AddAutoMapper(cfg => {}, typeof(MappingConfig));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCustomHealthChecks(builder.Configuration);
 
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
+app.UseCustomHealthChecks();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

@@ -7,10 +7,10 @@ public interface ILoginService
 {
  
     Task<LoginResponseDto> BuscarPorCpfAsync(string cpf);
-    Task<LoginResponseDto> BuscarPorIdAsync(Guid id);
-    Task AtualizarSenhaAsync(Guid id, string novaSenha);
-    Task DeleteAsync(Guid id);
+    Task<LoginResponseDto> BuscarPorIdAsync(string id);
+    Task AtualizarSenhaAsync(string id, string novaSenha);
+    Task DeleteAsync(string id);
     Task<LoginResponseDto> AutenticarAsync(LoginRequestDto loginRequestDto);
     Task<IEnumerable<LoginResponseDto>> ListarTodosAsync();
-    Task DesbloquearUsuarioAsync(Guid id);
+    Task DesbloquearUsuarioAsync(string id);
 }

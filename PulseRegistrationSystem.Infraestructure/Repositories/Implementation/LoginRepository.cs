@@ -1,96 +1,40 @@
-using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 using PulseRegistrationSystem.Domain.Entities;
-using PulseRegistrationSystem.Infraestructure.Persistence;
 using PulseRegistrationSystem.Infraestructure.Repositories.Interface;
+using PulseRegistrationSystem.Infrastructure.Persistence.Database;
 
 namespace PulseRegistrationSystem.Infraestructure.Repositories.Implementation;
 
 public class LoginRepository : ILoginRepository
-
 {
+    private readonly IMongoCollection<Login> _logins;
 
-    private readonly PulseRegistrationSystemContext _context;
-
-    private readonly DbSet<Login> _dbSet;
- 
-    public LoginRepository(PulseRegistrationSystemContext context)
-
+    public LoginRepository(MongoDbContext context)
     {
-
-        _context = context;
-
-        _dbSet = context.Set<Login>();
-
-    }
- 
-    public async Task<Login?> GetByCpfAsync(string cpf)
-
-    {
-
-        return await _dbSet
-
-            .Include(l => l.Usuario)
-
-            .FirstOrDefaultAsync(l => l.NumeroCpf == cpf);
-
-    }
- 
-    public async Task<IEnumerable<Login>> GetAllAsync()
-
-    {
-
-        return await _dbSet
-
-            .Include(l => l.Usuario)
-
-            .ToListAsync();
-
-    }
- 
- 
-    public async Task<Login?> GetByIdAsync(Guid id)
-
-    {
-
-        return await _dbSet
-
-            .Include(l => l.Usuario)
-
-            .FirstOrDefaultAsync(l => l.Id == id);
-
-    }
- 
- 
-    public async Task UpdateAsync(Login login)
-
-    {
-
-        _dbSet.Update(login);
-
-        await _context.SaveChangesAsync();
-
-        _context.Entry(login).Reload();
-
-    }
- 
-    public async Task RemoveAsync(Login login)
-
-    {
-
-        _dbSet.Remove(login);
-
-        await _context.SaveChangesAsync();
-
-    }
- 
-    public async Task AddAsync(Login login)
-
-    {
-
-        await _dbSet.AddAsync(login);
-
-        await _context.SaveChangesAsync();
-
+        _logins = context.GetCollection<Login>("logins");
     }
 
+    public async Task<IEnumerable<Login>> GetAllAsync() =>
+        await _logins.Find(_ => true).ToListAsync();
+
+    public async Task<Login?> GetByIdAsync(string id) =>
+        await _logins.Find(l => l.Id == id).FirstOrDefaultAsync();
+
+    public async Task AddAsync(Login entity) =>
+        await _logins.InsertOneAsync(entity);
+
+    public async Task UpdateAsync(Login entity)
+    {
+        var filter = Builders<Login>.Filter.Eq(l => l.Id, entity.Id);
+        await _logins.ReplaceOneAsync(filter, entity);
+    }
+
+    public async Task RemoveAsync(Login entity)
+    {
+        var filter = Builders<Login>.Filter.Eq(l => l.Id, entity.Id);
+        await _logins.DeleteOneAsync(filter);
+    }
+
+    public async Task<Login?> GetByCpfAsync(string cpf) =>
+        await _logins.Find(l => l.NumeroCpf == cpf).FirstOrDefaultAsync();
 }

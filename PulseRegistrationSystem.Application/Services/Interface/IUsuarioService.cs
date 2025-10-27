@@ -7,8 +7,8 @@ public interface IUsuarioService
 {
     Task<UsuarioResponseDto> CriarAsync(UsuarioRequestDto usuarioRequestDto);
     Task<IEnumerable<UsuarioResponseDto>> ListarTodosAsync();
-    Task<UsuarioResponseDto> BuscarPorIdAsync(Guid id);
-    Task AtualizarAsync(Guid id, UsuarioRequestDto dto);
-    Task DeletarAsync(Guid id);
+    Task<UsuarioResponseDto> BuscarPorIdAsync(string id);
+    Task AtualizarAsync(string id, UsuarioRequestDto dto);
+    Task DeletarAsync(string id);
     
 }
