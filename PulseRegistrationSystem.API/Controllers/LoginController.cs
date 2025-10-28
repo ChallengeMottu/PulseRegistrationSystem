@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using PulseRegistrationSystem.Application.DTOs.Request;
 using PulseRegistrationSystem.Application.DTOs.Response;
@@ -6,8 +7,9 @@ using PulseRegistrationSystem.Application.Services.Interface;
 
 namespace PulseRegistrationSystem.API.Controllers
 {
-    [Route("api/login")]
     [ApiController]
+    [ApiVersion("1.0")] // 🔹 Adicione esta linha
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class LoginController(ILoginService loginService) : ControllerBase
     {
         [HttpPost("autenticar")]
