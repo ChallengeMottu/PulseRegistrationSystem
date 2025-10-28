@@ -10,40 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29cf4941-6d04-483b-a529-5b23b2913576" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/HealthCheckConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Configuration/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Configuration/MongoDbSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/Configs/Settings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/Database/MongoDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/SwaggerConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/VersioningConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/LoginController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/LoginController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/PulseRegistrationSystem.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/PulseRegistrationSystem.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Response/LoginResponseDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Response/LoginResponseDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Response/UsuarioResponseDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Response/UsuarioResponseDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/MapperConfiguration/MappingConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/MapperConfiguration/MappingConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Configuration/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Configuration/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Implementation/LoginService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Implementation/LoginService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Implementation/UsuarioService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Implementation/UsuarioService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Interface/ILoginService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Interface/ILoginService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Interface/IUsuarioService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Application/Services/Interface/IUsuarioService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Usuario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Entities/Usuario.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Exceptions/UserNotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/Exceptions/UserNotFoundException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/PulseRegistrationSystem.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Domain/PulseRegistrationSystem.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Configuration/CollectionExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Migrations/20250911213248_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Migrations/20250911213248_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Migrations/PulseRegistrationSystemContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/Mappings/LoginMapping.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/Mappings/UsuarioMapping.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Persistence/PulseRegistrationSystemContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/PulseRegistrationSystem.Infraestructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/PulseRegistrationSystem.Infraestructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Implementation/LoginRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Implementation/LoginRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Implementation/UsuarioRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Implementation/UsuarioRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Interface/IMethodsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.Infraestructure/Repositories/Interface/IMethodsRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +32,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/649f9a5315084d038b64e29ea11b1fb56d20/91/bc612ef1/IConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/HealthCheckConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/SwaggerConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/VersioningConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/LoginController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/EnderecoRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -173,6 +148,8 @@
       <updated>1757613302069</updated>
       <workItem from="1757613306892" duration="3872000" />
       <workItem from="1761559441731" duration="9473000" />
+      <workItem from="1761615553795" duration="12000" />
+      <workItem from="1761615584537" duration="1770000" />
     </task>
     <servers />
   </component>

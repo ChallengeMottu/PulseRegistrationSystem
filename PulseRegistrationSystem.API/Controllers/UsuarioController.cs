@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using PulseRegistrationSystem.Application.DTOs.Request;
 using PulseRegistrationSystem.Application.DTOs.Response;
@@ -6,8 +7,10 @@ using PulseRegistrationSystem.Domain.Exceptions;
 
 namespace PulseRegistrationSystem.API.Controllers;
 
-[Route("api/usuario")]
+
 [ApiController]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/[controller]")] 
 public class UsuarioController(IUsuarioService usuarioService) : ControllerBase
 {
     [HttpGet]
