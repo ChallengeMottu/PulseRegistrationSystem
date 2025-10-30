@@ -10,13 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29cf4941-6d04-483b-a529-5b23b2913576" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/SwaggerConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/VersioningConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/JwtConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/v2/AuthController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/v2/UsuarioControllerV2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PulseRegistrationSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/HealthCheckConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/HealthCheckConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/SwaggerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/SwaggerConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/LoginController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/LoginController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/PulseRegistrationSystem.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/PulseRegistrationSystem.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseRegistrationSystem.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseRegistrationSystem.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +36,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/649f9a5315084d038b64e29ea11b1fb56d20/91/bc612ef1/IConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/HealthCheckConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/JwtConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/SwaggerConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Configuration/VersioningConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/LoginController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/UsuarioController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/v2/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.API/Controllers/v2/UsuarioControllerV2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/EnderecoRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/LoginRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseRegistrationSystem.Application/DTOs/Request/UsuarioRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -149,7 +156,8 @@
       <workItem from="1757613306892" duration="3872000" />
       <workItem from="1761559441731" duration="9473000" />
       <workItem from="1761615553795" duration="12000" />
-      <workItem from="1761615584537" duration="1770000" />
+      <workItem from="1761615584537" duration="2722000" />
+      <workItem from="1761784162467" duration="5286000" />
     </task>
     <servers />
   </component>
