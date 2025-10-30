@@ -19,7 +19,7 @@ namespace PulseRegistrationSystem.API.Configuration
                     name: "MongoDB",
                     timeout: TimeSpan.FromSeconds(5),
                     tags: new[] { "db", "mongo" },
-                    failureStatus: HealthStatus.Unhealthy // faz a aplicação ficar Unhealthy se o MongoDB estiver indisponível
+                    failureStatus: HealthStatus.Unhealthy 
                 )
                 
                 .AddCheck(

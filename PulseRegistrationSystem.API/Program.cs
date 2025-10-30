@@ -13,6 +13,10 @@ builder.Services.AddCustomVersioning();
 builder.Services.AddCustomSwagger();             
 builder.Services.AddCustomHealthChecks(builder.Configuration); 
 
+builder.Services.AddJwtAuthentication(builder.Configuration);
+builder.Services.AddAuthorization();
+
+
 
 var settings = builder.Configuration.GetSection("Settings").Get<Settings>();
 builder.Services.AddScoped<ISenhaHasher, BCryptSenhaHasher>();
@@ -30,6 +34,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseCustomSwagger(); 
 }
+
+app.UseAuthentication();
+app.UseAuthorization();
+
 
 app.UseHttpsRedirection();
 app.MapControllers();
