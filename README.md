@@ -114,7 +114,6 @@ Baixe e instale o MongoDB Community Server.
 ```bash
 docker run -d --name pulse-mongo -p 27017:27017 mongo:7
 ```
-Isso cria um MongoDB rodando na porta padrão 27017.
 ---
 
 ### ▶️ Passos para execução
@@ -159,5 +158,6 @@ Aqui você poderá testar todos os endpoints da API.
 - JWT utilizado para autenticação nos endpoints da API v2
 - Health Checks configurados para monitorar a saúde da API e do banco de dados
 - Versionamento implementado via Asp.Versioning
+
 
 
